@@ -1,0 +1,7 @@
+%syntax-version=1.0.0
+%project=demo
+%uri=https://github.com/jeffusan/animated-waddle/
+
+appschema 2016-12-30T14:41:02Z root <root@b580edc1528c> # demo schema
+tables 2016-12-30T15:24:47Z root <root@a3ec086c676d> # demo tables
+roles 2016-12-30T14:55:54Z root <root@420bebfddb93> # example USER ROLES
