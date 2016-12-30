@@ -14,4 +14,17 @@ CREATE TABLE wisdom.stock (
   owner varchar(40)
 );
 
+CREATE TABLE joint.stock (
+  id serial primary key,
+  name varchar(40),
+  owner varchar(40)
+);
+
+CREATE VIEW joint.allstock AS
+  SELECT * FROM joint.stock;
+
+ALTER TABLE joint.stock ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY stock_management ON joint.stock TO PUBLIC USING (owner = current_user);
+
 COMMIT;
