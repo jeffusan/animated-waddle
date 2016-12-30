@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+
+  sqitch:
+    image: kindlyops/sqitch:pgsql
+    working_dir: /code
+    volumes:
+      - ./sqtch:/code
+    links:
+      - db
+
+  db:
+    image: postgres:9.6
+    ports:
+      - "5432:5432"
